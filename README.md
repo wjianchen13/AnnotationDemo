@@ -1,7 +1,10 @@
 # 注解
 ## 理解Java注解
-注解就相当于对源代码打的标签，给代码打上标签和删除标签对源代码没有任何影响。有的人要说了，你尽几把瞎扯，没有影响，打这些标签干毛线呢？其实不是这些标签自己起了什么作用，而且外部工具通过访问这些标签，然后根据不同的标签做出了相应的处理。这是注解的精髓，理解了这一点一切就变得不再那么神秘。
-例如我们写代码用的IDE（例如 IntelliJ Idea）,它检查发现某一个方法上面有@Deprecated这个注解，它就会在所有调用这个方法的地方将这个方法标记为删除。访问和处理Annotation的工具统称为APT(Annotation Processing Tool)
+注解就相当于对源代码打的标签，给代码打上标签和删除标签对源代码没有任何影响。有的人要说了，你尽几把瞎扯，没有影响，  
+打这些标签干毛线呢？其实不是这些标签自己起了什么作用，而且外部工具通过访问这些标签，然后根据不同的标签做出了相应的处理。  
+这是注解的精髓，理解了这一点一切就变得不再那么神秘。  
+例如我们写代码用的IDE（例如 IntelliJ Idea）,它检查发现某一个方法上面有@Deprecated这个注解，它就会在所有调用  
+这个方法的地方将这个方法标记为删除。访问和处理Annotation的工具统称为APT(Annotation Processing Tool)  
 
 # 获取类字段两种方式
 关于获取类的字段有两种方式：getFields()和getDeclaredFields()。  
@@ -528,8 +531,8 @@ public class Binding {
 我们通过反射调用生成类的构造方法，而所有的绑定逻辑都在那个类的构造方法里面，如下所示
 ```Java
 public MainActivity$Binding(MainActivity activity) {
-bindViews(activity);
-bindOnClicks(activity);
+    bindViews(activity);
+    bindOnClicks(activity);
 }
 ```
 
